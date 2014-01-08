@@ -1,0 +1,8 @@
+ul
+  li(ng-repeat='station in stations', ng-click='goToStation(station.id)')
+    .content
+      h2 {{station.stationName}}
+      .distance {{station.distance | prettyDistance}}
+    .availabilities
+      strong {{station.availableBikes}}
+      span  / {{station.availableDocks}}

@@ -1,0 +1,13 @@
+.station(ng-hide='isLoading')
+  h2 {{station.stationName}}
+  a.map(href='http://maps.google.com?q={{station.latitude}},{{station.longitude}}', target='_blank')
+    img(src='http://maps.googleapis.com/maps/api/staticmap?center={{station.latitude}},{{station.longitude}}&zoom=16&size=290x120&scale=2&sensor=true')
+    span.pin
+  .availabilities
+    .bikes
+      strong {{station.availableBikes}}
+      |  available bikes
+    .docks
+      span {{station.availableDocks}}
+      |  available docks
+  a.back(href='#') ← Back to list
